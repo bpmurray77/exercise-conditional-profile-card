@@ -31,12 +31,12 @@ function render(variables = {}) {
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
   if (variables.name == null) name = "Lucy";
   else name = variables.name;
-  let lastname = null;
-  if (variables.lastname == null) lastname = "Smith";
-  else lastname = variables.lastname;
   console.log(variables.role ? "true" : (variables.role = ""));
   console.log(variables.country ? "true" : (variables.country = ""));
   console.log(variables.city ? "true" : (variables.city = ""));
+  let lastname = null;
+  if (variables.lastname == null) lastname = "Smith";
+  else lastname = variables.lastname;
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
